@@ -1,0 +1,20 @@
+import PropTypes from 'prop-types';
+import { Label, FilterInput } from "./Filter.styled";
+
+const Filter = ({filter, onFilterContacts}) => (
+<Label>Find contacts by name
+  <FilterInput 
+  type="text"
+  value={filter}
+  onChange={onFilterContacts}
+  ></FilterInput>
+</Label> 
+)
+
+export default Filter;
+
+Filter.propTypes = {
+  filter: PropTypes.arrayOf(PropTypes.string),
+  onFilterContacts: PropTypes.func,
+
+} 
